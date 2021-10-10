@@ -1,4 +1,4 @@
-document.getElementById('btn').addEventListener('click', function (){
+document.getElementById('input-id').addEventListener('keyup', function (){
     let inputText = document.getElementById('input-id').value
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText}`)
         .then(response => response.json())
@@ -8,7 +8,8 @@ document.getElementById('btn').addEventListener('click', function (){
 
 function showDataUI(data)
 {
-    let inputText = document.getElementById('input-id').value = ''
+
+    document.getElementById('row').innerHTML = ''
     // console.log(data)
     for (let i of data)
     {
